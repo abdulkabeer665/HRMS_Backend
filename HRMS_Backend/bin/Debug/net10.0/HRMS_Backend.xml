@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HRMS_Backend</name>
+    </assembly>
+    <members>
+        <member name="M:HRMS_Backend.Controllers.AuthenticateController.Login(HRMS_Backend.BAL.RequestParameters.Loginparam)">
+            <summary>
+            Login API
+            </summary>
+            <param name="loginParam"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.AuthenticateController.RefreshToken(HRMS_Backend.BAL.RequestParameters.RefreshTokenRequest)">
+            <summary>
+            Refreshing Token when Last token is valid
+            </summary>
+            <param name="refreshTokenRequest"></param>
+            <returns></returns>
+            <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException"></exception>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DashboardController.EmployeesCount">
+            <summary>
+            Employees Count
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DashboardController.DashboardMenusAgainstRoleID(HRMS_Backend.BAL.RequestParameters.UserReqParams)">
+            <summary>
+            Get Dashboard Menus By passing the RoleID
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DashboardController.LeavesCountAgainstEmpID(HRMS_Backend.BAL.RequestParameters.UserReqParams)">
+            <summary>
+            Get Leaves Count against EmpID
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DashboardController.GetEmployeeInfoAgainstEmpID(HRMS_Backend.BAL.RequestParameters.EmpIDReqParams)">
+            <summary>
+            Get Employee Info against EmpID
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DashboardController.GetLeavesEntitledAvailedAgainstEmpID(HRMS_Backend.BAL.RequestParameters.EmpIDReqParams)">
+            <summary>
+            Get Leaves Entitled and Availed against EmpID
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DashboardController.PendingLeavesCountAgainstRoleID(HRMS_Backend.BAL.RequestParameters.RoleIDReqParams)">
+            <summary>
+            Get Pending Leaves Count against Role ID
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.GetLeaveAvailedAgainstLeaveType(HRMS_Backend.BAL.RequestParameters.LeaveReqParams)">
+            <summary>
+            Get Leaves availed against leave type and emp id
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.PendingLeaves(HRMS_Backend.BAL.RequestParameters.PendingLeavesReqParams)">
+            <summary>
+            Get Leaves availed against leave type and emp id
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.InsertCasualLeave(HRMS_Backend.BAL.RequestParameters.CasualLeaveReqParams)">
+            <summary>
+            Insert Casual Leave
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.UpdateCasualLeave(HRMS_Backend.BAL.RequestParameters.CasualLeaveReqParams)">
+            <summary>
+            Update Casual Leave
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.GetLeaveInfoAgainstRefNo(HRMS_Backend.BAL.RequestParameters.LeaveInfoReqParams)">
+            <summary>
+            Get Leave Info Against Ref No and Leave Type for SickCasual and for Annual
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.InsertSickLeave(HRMS_Backend.BAL.RequestParameters.SickLeaveReqParams)">
+            <summary>
+            Insert Sick Leave
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.LeavesController.UpdateSickLeave(HRMS_Backend.BAL.RequestParameters.SickLeaveReqParams)">
+            <summary>
+            Update Sick Leave
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.MenuController.GetAllMenus(HRMS_Backend.BAL.RequestParameters.MenuReqParams)">
+            <summary>
+            This endpoint will use to return all the active and allowed menus to the ROLE
+            </summary>
+            <param name="menuReqParams"></param>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.MenuController.GetMenuOptions(HRMS_Backend.BAL.RequestParameters.MenuReqParams)">
+            <summary>
+            This endpoint will use to get Add, Edit, Delete and View option against MenuID and RoleID
+            </summary>
+            <param name="menuReqParams"></param>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.MyTeamController.GetMyTeamInfo(HRMS_Backend.BAL.RequestParameters.ReportingManagerReqParams)">
+            <summary>
+            Get Leaves availed against leave type and emp id
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>

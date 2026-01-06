@@ -1,0 +1,506 @@
+[
+  {
+    "ContainingType": "HRMS_Backend.Controllers.AuthenticateController",
+    "Method": "Login",
+    "RelativePath": "api/Authenticate/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginParam",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BLoginparam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.AuthenticateController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Authenticate/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenRequest",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BRefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DashboardController",
+    "Method": "DashboardMenusAgainstRoleID",
+    "RelativePath": "api/Dashboard/DashboardMenusAgainstRoleID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BUserReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DashboardController",
+    "Method": "EmployeesCount",
+    "RelativePath": "api/Dashboard/EmployeesCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DashboardController",
+    "Method": "GetEmployeeInfoAgainstEmpID",
+    "RelativePath": "api/Dashboard/GetEmployeeInfoAgainstEmpID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empIDReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BEmpIDReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DashboardController",
+    "Method": "GetLeavesEntitledAvailedAgainstEmpID",
+    "RelativePath": "api/Dashboard/GetLeavesEntitledAvailedAgainstEmpID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empIDReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BEmpIDReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DashboardController",
+    "Method": "LeavesCountAgainstEmpID",
+    "RelativePath": "api/Dashboard/LeavesCountAgainstEmpID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BUserReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DashboardController",
+    "Method": "PendingLeavesCountAgainstRoleID",
+    "RelativePath": "api/Dashboard/PendingLeavesCountAgainstRoleID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleIDReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BRoleIDReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.FileController",
+    "Method": "DeleteFile",
+    "RelativePath": "api/File/DeleteFile",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BFileReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.FileController",
+    "Method": "DownloadFile",
+    "RelativePath": "api/File/DownloadFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BFileReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "GetLeaveAvailedAgainstLeaveType",
+    "RelativePath": "api/Leaves/GetLeaveAvailedAgainstLeaveType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "leaveReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BLeaveReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "GetLeaveInfoAgainstRefNo",
+    "RelativePath": "api/Leaves/GetLeaveInfoAgainstRefNo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "leaveInfoReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BLeaveInfoReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "InsertCasualLeave",
+    "RelativePath": "api/Leaves/InsertCasualLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "casualLeaveReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BCasualLeaveReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "InsertSickLeave",
+    "RelativePath": "api/Leaves/InsertSickLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LeaveID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RefNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeaveType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmpID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Reason",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReportingManagerID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManagerApproved",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManagerApprovedDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManagerRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRApproved",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRApprovedDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeaveStatus",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "myFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsFileChanged",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PendingFrom",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "PendingLeaves",
+    "RelativePath": "api/Leaves/PendingLeaves",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pendingLeavesReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BPendingLeavesReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "UpdateCasualLeave",
+    "RelativePath": "api/Leaves/UpdateCasualLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "casualLeaveReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BCasualLeaveReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.LeavesController",
+    "Method": "UpdateSickLeave",
+    "RelativePath": "api/Leaves/UpdateSickLeave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LeaveID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RefNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeaveType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmpID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Reason",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ReportingManagerID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManagerApproved",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManagerApprovedDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManagerRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRApproved",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRApprovedDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HRRemarks",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LeaveStatus",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "myFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsFileChanged",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PendingFrom",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.MenuController",
+    "Method": "GetAllMenus",
+    "RelativePath": "api/Menu/GetAllMenus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BMenuReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.MenuController",
+    "Method": "GetMenuOptions",
+    "RelativePath": "api/Menu/GetMenuOptions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BMenuReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.MyTeamController",
+    "Method": "GetMyTeamInfo",
+    "RelativePath": "api/MyTeam/GetMyTeamInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportingMgrReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BReportingManagerReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

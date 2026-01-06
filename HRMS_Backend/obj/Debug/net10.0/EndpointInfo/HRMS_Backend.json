@@ -1,0 +1,1234 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "SIUT HRMS API Project",
+    "description": "SIUT HRMS API Project for Web & Android Application",
+    "contact": {
+      "name": "Abdul Kabeer Bhatti",
+      "email": "akabeer919@gmail.com"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Authenticate/Login": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "Login API",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loginparam"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loginparam"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loginparam"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Loginparam"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Authenticate/RefreshToken": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "summary": "Refreshing Token when Last token is valid",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/EmployeesCount": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Employees Count",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/DashboardMenusAgainstRoleID": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Get Dashboard Menus By passing the RoleID",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/LeavesCountAgainstEmpID": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Get Leaves Count against EmpID",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/GetEmployeeInfoAgainstEmpID": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Get Employee Info against EmpID",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/GetLeavesEntitledAvailedAgainstEmpID": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Get Leaves Entitled and Availed against EmpID",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmpIDReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/PendingLeavesCountAgainstRoleID": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Get Pending Leaves Count against Role ID",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleIDReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleIDReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleIDReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleIDReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/File/DownloadFile": {
+      "post": {
+        "tags": [
+          "File"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/File/DeleteFile": {
+      "delete": {
+        "tags": [
+          "File"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FileReqParam"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/GetLeaveAvailedAgainstLeaveType": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Get Leaves availed against leave type and emp id",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/PendingLeaves": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Get Leaves availed against leave type and emp id",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PendingLeavesReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PendingLeavesReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PendingLeavesReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PendingLeavesReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/InsertCasualLeave": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Insert Casual Leave",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/UpdateCasualLeave": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Update Casual Leave",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CasualLeaveReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/GetLeaveInfoAgainstRefNo": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Get Leave Info Against Ref No and Leave Type for SickCasual and for Annual",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveInfoReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveInfoReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveInfoReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveInfoReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/InsertSickLeave": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Insert Sick Leave",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "LeaveID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RefNo": {
+                    "type": "string"
+                  },
+                  "LeaveType": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "FromDate": {
+                    "type": "string"
+                  },
+                  "ToDate": {
+                    "type": "string"
+                  },
+                  "EmpID": {
+                    "type": "string"
+                  },
+                  "RequestDate": {
+                    "type": "string"
+                  },
+                  "Reason": {
+                    "type": "string"
+                  },
+                  "ReportingManagerID": {
+                    "type": "string"
+                  },
+                  "ManagerApproved": {
+                    "type": "string"
+                  },
+                  "ManagerApprovedDate": {
+                    "type": "string"
+                  },
+                  "ManagerRemarks": {
+                    "type": "string"
+                  },
+                  "HRID": {
+                    "type": "string"
+                  },
+                  "HRApproved": {
+                    "type": "string"
+                  },
+                  "HRApprovedDate": {
+                    "type": "string"
+                  },
+                  "HRRemarks": {
+                    "type": "string"
+                  },
+                  "LeaveStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "myFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IsFileChanged": {
+                    "type": "boolean"
+                  },
+                  "PendingFrom": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "LeaveID": {
+                  "style": "form"
+                },
+                "RefNo": {
+                  "style": "form"
+                },
+                "LeaveType": {
+                  "style": "form"
+                },
+                "FromDate": {
+                  "style": "form"
+                },
+                "ToDate": {
+                  "style": "form"
+                },
+                "EmpID": {
+                  "style": "form"
+                },
+                "RequestDate": {
+                  "style": "form"
+                },
+                "Reason": {
+                  "style": "form"
+                },
+                "ReportingManagerID": {
+                  "style": "form"
+                },
+                "ManagerApproved": {
+                  "style": "form"
+                },
+                "ManagerApprovedDate": {
+                  "style": "form"
+                },
+                "ManagerRemarks": {
+                  "style": "form"
+                },
+                "HRID": {
+                  "style": "form"
+                },
+                "HRApproved": {
+                  "style": "form"
+                },
+                "HRApprovedDate": {
+                  "style": "form"
+                },
+                "HRRemarks": {
+                  "style": "form"
+                },
+                "LeaveStatus": {
+                  "style": "form"
+                },
+                "myFile": {
+                  "style": "form"
+                },
+                "IsFileChanged": {
+                  "style": "form"
+                },
+                "PendingFrom": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Leaves/UpdateSickLeave": {
+      "post": {
+        "tags": [
+          "Leaves"
+        ],
+        "summary": "Update Sick Leave",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "LeaveID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RefNo": {
+                    "type": "string"
+                  },
+                  "LeaveType": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "FromDate": {
+                    "type": "string"
+                  },
+                  "ToDate": {
+                    "type": "string"
+                  },
+                  "EmpID": {
+                    "type": "string"
+                  },
+                  "RequestDate": {
+                    "type": "string"
+                  },
+                  "Reason": {
+                    "type": "string"
+                  },
+                  "ReportingManagerID": {
+                    "type": "string"
+                  },
+                  "ManagerApproved": {
+                    "type": "string"
+                  },
+                  "ManagerApprovedDate": {
+                    "type": "string"
+                  },
+                  "ManagerRemarks": {
+                    "type": "string"
+                  },
+                  "HRID": {
+                    "type": "string"
+                  },
+                  "HRApproved": {
+                    "type": "string"
+                  },
+                  "HRApprovedDate": {
+                    "type": "string"
+                  },
+                  "HRRemarks": {
+                    "type": "string"
+                  },
+                  "LeaveStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "myFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IsFileChanged": {
+                    "type": "boolean"
+                  },
+                  "PendingFrom": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "LeaveID": {
+                  "style": "form"
+                },
+                "RefNo": {
+                  "style": "form"
+                },
+                "LeaveType": {
+                  "style": "form"
+                },
+                "FromDate": {
+                  "style": "form"
+                },
+                "ToDate": {
+                  "style": "form"
+                },
+                "EmpID": {
+                  "style": "form"
+                },
+                "RequestDate": {
+                  "style": "form"
+                },
+                "Reason": {
+                  "style": "form"
+                },
+                "ReportingManagerID": {
+                  "style": "form"
+                },
+                "ManagerApproved": {
+                  "style": "form"
+                },
+                "ManagerApprovedDate": {
+                  "style": "form"
+                },
+                "ManagerRemarks": {
+                  "style": "form"
+                },
+                "HRID": {
+                  "style": "form"
+                },
+                "HRApproved": {
+                  "style": "form"
+                },
+                "HRApprovedDate": {
+                  "style": "form"
+                },
+                "HRRemarks": {
+                  "style": "form"
+                },
+                "LeaveStatus": {
+                  "style": "form"
+                },
+                "myFile": {
+                  "style": "form"
+                },
+                "IsFileChanged": {
+                  "style": "form"
+                },
+                "PendingFrom": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Menu/GetAllMenus": {
+      "post": {
+        "tags": [
+          "Menu"
+        ],
+        "summary": "This endpoint will use to return all the active and allowed menus to the ROLE",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Menu/GetMenuOptions": {
+      "post": {
+        "tags": [
+          "Menu"
+        ],
+        "summary": "This endpoint will use to get Add, Edit, Delete and View option against MenuID and RoleID",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MenuReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MyTeam/GetMyTeamInfo": {
+      "post": {
+        "tags": [
+          "MyTeam"
+        ],
+        "summary": "Get Leaves availed against leave type and emp id",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportingManagerReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportingManagerReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportingManagerReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportingManagerReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CasualLeaveReqParams": {
+        "type": "object",
+        "properties": {
+          "leaveID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "refNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "leaveType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fromDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "toDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "empID": {
+            "type": "string",
+            "nullable": true
+          },
+          "requestDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportingManagerID": {
+            "type": "string",
+            "nullable": true
+          },
+          "managerApproved": {
+            "type": "string",
+            "nullable": true
+          },
+          "managerApprovedDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "managerRemarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "hrid": {
+            "type": "string",
+            "nullable": true
+          },
+          "hrApproved": {
+            "type": "string",
+            "nullable": true
+          },
+          "hrApprovedDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "hrRemarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "leaveStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pendingFrom": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EmpIDReqParams": {
+        "type": "object",
+        "properties": {
+          "empID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileReqParam": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LeaveInfoReqParams": {
+        "type": "object",
+        "properties": {
+          "leaveType": {
+            "type": "string",
+            "nullable": true
+          },
+          "refNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LeaveReqParams": {
+        "type": "object",
+        "properties": {
+          "leaveType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "empID": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Loginparam": {
+        "type": "object",
+        "properties": {
+          "loginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MenuReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "string",
+            "nullable": true
+          },
+          "menuID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PendingLeavesReqParams": {
+        "type": "object",
+        "properties": {
+          "leaveType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reportingManagerID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefreshTokenRequest": {
+        "type": "object",
+        "properties": {
+          "jwtToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReportingManagerReqParams": {
+        "type": "object",
+        "properties": {
+          "reportingManagerID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleIDReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reportingManagerID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserReqParams": {
+        "type": "object",
+        "properties": {
+          "add": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "inactive": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "update": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "empID": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "userAccess": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleID": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
