@@ -79,3 +79,4 @@ F:\SIUT\GitHub\HRMS_Backend\HRMS_Backend\obj\Debug\net10.0\HRMS_Backend.genrunti
 F:\SIUT\GitHub\HRMS_Backend\HRMS_Backend\obj\Debug\net10.0\ref\HRMS_Backend.dll
 F:\SIUT\GitHub\HRMS_Backend\HRMS_Backend\bin\Debug\net10.0\HRMS_Backend.xml
 F:\SIUT\GitHub\HRMS_Backend\HRMS_Backend\obj\Debug\net10.0\HRMS_Backend.xml
+F:\SIUT\GitHub\HRMS_Backend\HRMS_Backend\obj\Debug\net10.0\HRMS_Backend.sourcelink.json

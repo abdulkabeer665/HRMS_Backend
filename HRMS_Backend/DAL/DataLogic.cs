@@ -459,7 +459,9 @@ namespace HRMS_Backend.DAL
             return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
         }
 
-        #endregion Update Sick Leave With Attachment
+        #endregion Update Sick Leave Without Attachment
+
+        #region Update Sick Leave With Attachment
 
         public static async Task<DataTable> UpdateSickLeaveWithAttachment(SickLeaveReqParams sickLeaveReqParams, string fileName, string filePath, string fileExtension, string StoreProcedure)
         {
@@ -487,6 +489,8 @@ namespace HRMS_Backend.DAL
         }
 
         #endregion Update Sick Leave With Attachment
+
+        #endregion Leaves Related Logics
 
         #region "Menus Logics"
 
