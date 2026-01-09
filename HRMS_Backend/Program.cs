@@ -4,6 +4,7 @@ using HRMS_Backend.Hubs;
 using HRMS_Backend.Model;
 using HRMS_Backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -191,6 +192,13 @@ app.UseSwaggerUI(c =>
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Uploads")),
+    RequestPath = "/Uploads"
+});
 
 app.UseCors("defaultcorspolicy");
 

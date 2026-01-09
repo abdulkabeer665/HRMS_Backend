@@ -62,6 +62,41 @@
             <returns></returns>
             
         </member>
+        <member name="M:HRMS_Backend.Controllers.DepartmentController.GetAllDepartments">
+            <summary>
+            This API will return all departments
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DepartmentController.GetAllDepartmentsDD">
+            <summary>
+            This API will return all departments for dropdown
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.DesignationController.GetAllDesignationsDD">
+            <summary>
+            This API will return all Designations for dropdown
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.EmployeeController.GetAllEmployeesDD">
+            <summary>
+            This API will return all Employees for dropdown
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.EmployeeController.GetAllEmployees">
+            <summary>
+            This API will return all Employees
+            </summary>
+            <returns></returns>
+            
+        </member>
         <member name="M:HRMS_Backend.Controllers.LeavesController.GetLeaveAvailedAgainstLeaveType(HRMS_Backend.BAL.RequestParameters.LeaveReqParams)">
             <summary>
             Get Leaves availed against leave type and emp id
@@ -129,6 +164,54 @@
             </summary>
             <returns></returns>
             
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.GetAllRoles">
+            <summary>
+            Get Leaves availed against leave type and emp id
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.GetAllRolesDD">
+            <summary>
+            Get All Roles Dropdown
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.GetRoleInfoByRoleID(HRMS_Backend.BAL.RequestParameters.RoleReqParams)">
+            <summary>
+            This API will return all the rights of a selected Role
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.InsertRole(HRMS_Backend.BAL.RequestParameters.InsertRoleReqParams)">
+            <summary>
+            This API will use to insert an Role
+            </summary>
+            /// <param name="insertRoleReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.UpdateRole(HRMS_Backend.BAL.RequestParameters.UpdateRoleReqParams)">
+            <summary>
+            This API will use to Update right for Role
+            </summary>
+            /// <param name="updateRoleReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.UpdateRoleInfo(HRMS_Backend.BAL.RequestParameters.UpdateRoleInfoReqParams)">
+            <summary>
+            This API will use to Update info for Role
+            </summary>
+            /// <param name="updateRoleInfoReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.RolesController.DeleteRole(HRMS_Backend.BAL.RequestParameters.DeleteRoleReqParams)">
+            <summary>
+            This API will use to delete an Role
+            </summary>
+            /// <param name="deleteRoleReqParams"></param>
+            <returns>This will return a message of success</returns>
         </member>
         <member name="T:Program">
             <summary>

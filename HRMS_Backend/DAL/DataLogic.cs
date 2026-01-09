@@ -543,5 +543,96 @@ namespace HRMS_Backend.DAL
 
         #endregion
 
+        #region "Roles Logics"
+
+        #region "Get All Roles"
+
+        public static async Task<DataTable> GetAllRoles(string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = { };
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Get Role Info By RoleID
+
+        public static async Task<DataSet> GetRoleInfoByRoleID(RoleReqParams roleReqParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@RoleID", roleReqParams.RoleID)
+            };
+            return await CGD.DSWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Insert Role
+
+        public static async Task<DataTable> InsertRole(InsertRoleReqParams insertRoleReqParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@Description", insertRoleReqParams.Description),
+            };
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Update Role
+
+        public static async Task<DataTable> UpdateRole(DataTable dt, UpdateRoleReqParams updateRoleReqParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@RoleAssignOptions_DTable", dt),
+                new SqlParameter ("@RoleID", updateRoleReqParams.RoleID),
+                new SqlParameter ("@UserInfo", updateRoleReqParams.UserInfo),
+                new SqlParameter ("@Delete", updateRoleReqParams.Delete),
+            };
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Update Role Info
+
+        public static async Task<DataTable> UpdateRoleInfo(UpdateRoleInfoReqParams updateRoleInfoReqParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@RoleID", updateRoleInfoReqParams.RoleID),
+                new SqlParameter ("@UserInfo", updateRoleInfoReqParams.UserInfo),
+                new SqlParameter ("@Description", updateRoleInfoReqParams.Description),
+                new SqlParameter ("@Delete", updateRoleInfoReqParams.Delete),
+            };
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Delete App Role
+
+        public static async Task<DataTable> DeleteRole(DeleteRoleReqParams deleteRoleReqParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@RoleID", deleteRoleReqParams.RoleID),
+                new SqlParameter ("@Delete", deleteRoleReqParams.Delete),
+            };
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #endregion
+
     }
 }

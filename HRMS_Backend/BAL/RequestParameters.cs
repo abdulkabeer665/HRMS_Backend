@@ -208,5 +208,50 @@ namespace HRMS_Backend.BAL
             public string ReportingManagerID { get; set; } = string.Empty;
         }
         #endregion
+
+        #region "Roles Parameters"
+
+        public class RoleReqParams
+        {
+            public string? RoleID { get; set; }
+
+        }
+
+        public class InsertRoleReqParams
+        {
+            public int RoleID { get; set; } = 0;
+            public string? Description { get; set; } = "";
+        }
+
+        public class UpdateRoleReqParams
+        {
+            public string? RoleID { get; set; } = "";
+            public List<RoleAssignOptions> roleAssignOptions_list { get; set; } = new List<RoleAssignOptions> { };
+            public int Delete { get; set; }
+            public int UserInfo { get; set; }
+        }
+
+        public class RoleAssignOptions
+        {
+            public int RoleAsingmentID { get; set; }
+            public string? RoleID { get; set; } = "";
+            public int Value { get; set; }
+        }
+
+        public class UpdateRoleInfoReqParams
+        {
+            public string? RoleID { get; set; } = "";
+            public string? Description { get; set; } = "";
+            public int UserInfo { get; set; }
+            public int Delete { get; set; }
+        }
+
+        public class DeleteRoleReqParams
+        {
+            public string? RoleID { get; set; } = "";
+            public int Delete { get; set; }
+        }
+
+        #endregion
     }
 }

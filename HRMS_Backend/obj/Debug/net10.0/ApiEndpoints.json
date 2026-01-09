@@ -122,6 +122,56 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HRMS_Backend.Controllers.DepartmentController",
+    "Method": "GetAllDepartments",
+    "RelativePath": "api/Department/GetAllDepartments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DepartmentController",
+    "Method": "GetAllDepartmentsDD",
+    "RelativePath": "api/Department/GetAllDepartmentsDD",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.DesignationController",
+    "Method": "GetAllDesignationsDD",
+    "RelativePath": "api/Designation/GetAllDesignationsDD",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.EmployeeController",
+    "Method": "GetAllEmployees",
+    "RelativePath": "api/Employee/GetAllEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.EmployeeController",
+    "Method": "GetAllEmployeesDD",
+    "RelativePath": "api/Employee/GetAllEmployeesDD",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HRMS_Backend.Controllers.FileController",
     "Method": "DeleteFile",
     "RelativePath": "api/File/DeleteFile",
@@ -498,6 +548,106 @@
       {
         "Name": "reportingMgrReqParams",
         "Type": "HRMS_Backend.BAL.RequestParameters\u002BReportingManagerReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Roles/DeleteRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteRoleReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BDeleteRoleReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Roles/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "GetAllRolesDD",
+    "RelativePath": "api/Roles/GetAllRolesDD",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "GetRoleInfoByRoleID",
+    "RelativePath": "api/Roles/GetRoleInfoByRoleID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BRoleReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "InsertRole",
+    "RelativePath": "api/Roles/InsertRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertRoleReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BInsertRoleReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Roles/UpdateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRoleReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BUpdateRoleReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.RolesController",
+    "Method": "UpdateRoleInfo",
+    "RelativePath": "api/Roles/UpdateRoleInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRoleInfoReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BUpdateRoleInfoReqParams",
         "IsRequired": true
       }
     ],

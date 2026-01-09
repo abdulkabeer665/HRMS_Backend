@@ -12,6 +12,7 @@ namespace HRMS_Backend.Controllers
     [ApiController]
     public class MenuController : ControllerBase
     {
+
         #region "Declaration"
 
         private static string SP_GetMenusAgainstRoleID = "[dbo].[SP_GetMenusAgainstRoleID]";

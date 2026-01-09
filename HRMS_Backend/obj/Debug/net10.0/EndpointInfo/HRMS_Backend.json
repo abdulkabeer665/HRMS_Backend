@@ -284,6 +284,71 @@
         }
       }
     },
+    "/api/Department/GetAllDepartments": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "This API will return all departments",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Department/GetAllDepartmentsDD": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "summary": "This API will return all departments for dropdown",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Designation/GetAllDesignationsDD": {
+      "get": {
+        "tags": [
+          "Designation"
+        ],
+        "summary": "This API will return all Designations for dropdown",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/GetAllEmployeesDD": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "This API will return all Employees for dropdown",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/GetAllEmployees": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "This API will return all Employees",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/File/DownloadFile": {
       "post": {
         "tags": [
@@ -953,6 +1018,221 @@
           }
         }
       }
+    },
+    "/api/Roles/GetAllRoles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Get Leaves availed against leave type and emp id",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/GetAllRolesDD": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "Get All Roles Dropdown",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/GetRoleInfoByRoleID": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "This API will return all the rights of a selected Role",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/InsertRole": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "This API will use to insert an Role",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRoleReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRoleReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRoleReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertRoleReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/UpdateRole": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "This API will use to Update right for Role",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/UpdateRoleInfo": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "This API will use to Update info for Role",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleInfoReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleInfoReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleInfoReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleInfoReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Roles/DeleteRole": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "This API will use to delete an Role",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRoleReqParams"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRoleReqParams"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRoleReqParams"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRoleReqParams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1035,6 +1315,20 @@
         },
         "additionalProperties": false
       },
+      "DeleteRoleReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "string",
+            "nullable": true
+          },
+          "delete": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "EmpIDReqParams": {
         "type": "object",
         "properties": {
@@ -1049,6 +1343,20 @@
         "type": "object",
         "properties": {
           "fileName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InsertRoleReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
             "type": "string",
             "nullable": true
           }
@@ -1157,6 +1465,24 @@
         },
         "additionalProperties": false
       },
+      "RoleAssignOptions": {
+        "type": "object",
+        "properties": {
+          "roleAsingmentID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleID": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "RoleIDReqParams": {
         "type": "object",
         "properties": {
@@ -1167,6 +1493,63 @@
           "reportingManagerID": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoleInfoReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "userInfo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "delete": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRoleReqParams": {
+        "type": "object",
+        "properties": {
+          "roleID": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleAssignOptions_list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleAssignOptions"
+            },
+            "nullable": true
+          },
+          "delete": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userInfo": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
