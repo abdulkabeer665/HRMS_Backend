@@ -88,6 +88,15 @@ namespace HRMS_Backend.BAL
 
         #endregion
 
+        #region Update Employee Info Req Params
+
+        public class UpdateInfoReqParams
+        {
+            public string? EmpID { get; set; } = string.Empty;
+            public IFormFile? EmployeePhoto  { get; set; }
+        }
+        #endregion
+
         #endregion
 
         #region Dashboard Parameters 

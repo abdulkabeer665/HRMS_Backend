@@ -126,6 +126,17 @@ namespace HRMS_Backend.Controllers
             try
             {
                 DataTable dt = await DataLogic.GetEmployeeInfoAgainstEmpID(empIDReqParams, SP_GetEmployeeInfoAgainstEmpID);
+                string? fileName = dt.Rows[0]["FileName"].ToString();
+                string profilePhotoDirectory = GenericFunctions.GetFileLocation();
+                if (fileName != null && fileName != "")
+                {
+                    dt.Rows[0]["FileName"] = profilePhotoDirectory + "\\" + dt.Rows[0]["FileName"].ToString();
+                }
+                else
+                {
+                    dt.Rows[0]["FileName"] = profilePhotoDirectory + "\\" + "user.png";
+                }
+                ;
                 return Ok(dt);
             }
             catch (Exception ex)

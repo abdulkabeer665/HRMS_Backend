@@ -349,6 +349,83 @@
         }
       }
     },
+    "/api/Employee/ChangePassword": {
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "This API will use to change password",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePassword"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePassword"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePassword"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePassword"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employee/UpdateInfo": {
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "summary": "This API will use to Update Info",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "EmpID": {
+                    "type": "string"
+                  },
+                  "EmployeePhoto": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "EmpID": {
+                  "style": "form"
+                },
+                "EmployeePhoto": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/File/DownloadFile": {
       "post": {
         "tags": [
@@ -1309,6 +1386,28 @@
             "format": "int32"
           },
           "pendingFrom": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePassword": {
+        "type": "object",
+        "properties": {
+          "loginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "oldPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionUser": {
             "type": "string",
             "nullable": true
           }

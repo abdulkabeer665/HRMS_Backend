@@ -26,7 +26,7 @@ namespace HRMS_Backend.DAL
 
         #endregion
 
-        #region GeneratePasswordResetToken
+        #region Generate Password Reset Token
 
         public static DataTable GeneratePasswordResetToken(GeneratePasswordTokenParam gptP, string StoreProcedure)
         {
@@ -85,7 +85,7 @@ namespace HRMS_Backend.DAL
 
         #endregion
 
-        #region UpdateRefreshToken
+        #region Update Refresh Token
 
         public static DataTable UpdateRefreshToken(string loginName, string refreshToken, string StoredProcedure)
         {
@@ -131,7 +131,7 @@ namespace HRMS_Backend.DAL
 
         #endregion
 
-        #region LoginDetails
+        #region Login Details
 
         public static DataSet GetDetails(string loginName, string StoredProcedure)
         {
@@ -154,9 +154,9 @@ namespace HRMS_Backend.DAL
 
         #endregion
 
-        #region VerifyOldPassword
+        #region Verify Old Password
 
-        public static DataTable VerifyOldPassword(ChangePassword changePassword, string StoreProcedure)
+        public static async Task<DataTable> VerifyOldPassword(ChangePassword changePassword, string StoreProcedure)
         {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters =
@@ -165,7 +165,24 @@ namespace HRMS_Backend.DAL
                 new SqlParameter ("@OldPassword", changePassword.OldPassword),
                 new SqlParameter ("@NewPassword", changePassword.NewPassword)
             };
-            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Update Info
+
+        public static async Task<DataTable> UpdateInfo(UpdateInfoReqParams updateInfoReqParams, string fileName, string filePath, string fileExtension, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter ("@EmpID", updateInfoReqParams.EmpID),
+                new SqlParameter ("@fileName", fileName),
+                new SqlParameter ("@filePath", filePath),
+                new SqlParameter ("@fileExtension", fileExtension),               
+            };
+            return await CGD.DTWithParamAsync(StoreProcedure, sqlParameters, 1);
         }
 
         #endregion

@@ -153,6 +153,22 @@
   },
   {
     "ContainingType": "HRMS_Backend.Controllers.EmployeeController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Employee/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePassReqParams",
+        "Type": "HRMS_Backend.BAL.RequestParameters\u002BChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.EmployeeController",
     "Method": "GetAllEmployees",
     "RelativePath": "api/Employee/GetAllEmployees",
     "HttpMethod": "GET",
@@ -169,6 +185,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HRMS_Backend.Controllers.EmployeeController",
+    "Method": "UpdateInfo",
+    "RelativePath": "api/Employee/UpdateInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmployeePhoto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

@@ -23,6 +23,7 @@
             public string RoleID { get; set; }
             public string Role { get; set; }
             public string Designation { get; set; }
+            public string Department { get; set; }
             public string Status { get; set; }
             public string Message { get; set; }
             public string? ValidTill { get; set; }

@@ -86,6 +86,7 @@ namespace HRMS_Backend.Controllers
                             loginRes.EmpID = dt.Rows[0]["empID"].ToString();
                             loginRes.Role = role;
                             loginRes.Designation = dt.Rows[0]["designation"].ToString();
+                            loginRes.Department = dt.Rows[0]["department"].ToString();
                             loginRes.Status = status;
                             loginRes.Message = "User authenticated";
                             loginRes.RefreshToken = dt.Rows[0]["refreshToken"].ToString();
@@ -107,6 +108,7 @@ namespace HRMS_Backend.Controllers
                             loginRes.RoleID = "";
                             loginRes.Role = "";
                             loginRes.Designation = "";
+                            loginRes.Department = "";
                             loginRes.EmpID = "";
                             loginRes.Status = status;
                             loginRes.Message = "User not authenticated";
@@ -127,6 +129,7 @@ namespace HRMS_Backend.Controllers
                             loginRes.RoleID = "";
                             loginRes.Role = "";
                             loginRes.Designation = "";
+                            loginRes.Department = "";
                             loginRes.EmpID = "";
                             loginRes.Status = status;
                             loginRes.Message = "User not found";
@@ -153,6 +156,7 @@ namespace HRMS_Backend.Controllers
                     loginRes.RoleID = "";
                     loginRes.Role = "";
                     loginRes.Designation = "";
+                    loginRes.Department = "";
                     loginRes.EmpID = "";
                     loginRes.Status = "400";
                     loginRes.Message = "User not found";

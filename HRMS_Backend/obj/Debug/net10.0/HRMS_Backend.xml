@@ -97,6 +97,20 @@
             <returns></returns>
             
         </member>
+        <member name="M:HRMS_Backend.Controllers.EmployeeController.ChangePassword(HRMS_Backend.BAL.RequestParameters.ChangePassword)">
+            <summary>
+            This API will use to change password
+            </summary>
+            /// <param name="changePassReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:HRMS_Backend.Controllers.EmployeeController.UpdateInfo(HRMS_Backend.BAL.RequestParameters.UpdateInfoReqParams)">
+            <summary>
+            This API will use to Update Info
+            </summary>
+            /// <param name="updateInfoReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
         <member name="M:HRMS_Backend.Controllers.LeavesController.GetLeaveAvailedAgainstLeaveType(HRMS_Backend.BAL.RequestParameters.LeaveReqParams)">
             <summary>
             Get Leaves availed against leave type and emp id
